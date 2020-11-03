@@ -46,7 +46,7 @@ $name = $row->name;
                 <div class="ht-left">
                     <div class="mail-service">
                         <i class=" fa fa-envelope"></i>
-                        @gmail.com
+                        Unit_Keusahawanan@gmail.com
                     </div>
                 </div>
                 <div class="ht-right">
@@ -80,15 +80,7 @@ $name = $row->name;
                             <li class="heart-icon">
                                 <a href="#">
                                     <i class="icon_heart_alt"></i>
-
                                 </a>
-                            </li>
-                            <li class="cart-icon">
-                                <a href="#">
-                                    <i class="icon_bag_alt"></i>
-
-                                </a>
-                               
                             </li>
                             <li class="cart-price"></li>
                         </ul>
@@ -98,57 +90,56 @@ $name = $row->name;
         </div>
         <div class="nav-item">
             <div class="container">
-                
-                <nav class="nav-menu mobile-menu">
-                    <ul>
-                        <li><a href="./index.php">Home</a>
-                        <ul class="dropdown">
-                                <li><a href="#">View Profile</a></li>
-                                <li><a href="#">Update profile</a></li>
-                                <li><a href="./changepassword.php">Change Password</a></li>
-                                <li><a href="./logout.php">Logout</a></li>
+                <div class="d-flex justify-content-center">
+                    <nav class="nav-menu mobile-menu">
+                        <ul>
+                            <li><a href="./index.php">Home</a>
+                                <ul class="dropdown">
+                                    <li><a href="./viewprofile.php">View Profile</a></li>
+                                    <li><a href="./updateprofile.php">Update profile</a></li>
+                                    <li><a href="./changepassword.php">Change Password</a></li>
+                                    <li><a href="./logout.php">Logout</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Shop</a>
+                                <ul class="dropdown">
+                                    <li><a href="./clothings.php">Clothings</a></li>
+                                    <li><a href="./food.php">Foods & Beverages</a></li>
+                                    <li><a href="./shoes.php">Accessories/Shoes</a></li>
+                                    <li><a href="./gadget.php">Mobile & Gadgets</a></li>
+                                    <li><a href="./beauty.php">Health & Beauty</a></li>
+                                    <li><a href="./computer.php">Computer & Accessories</a></li>
+                                    <li><a href="./sports.php">Sports & Outdoor</a></li>
+                                    <li><a href="#">Others</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Sell</a>
+                                <ul class="dropdown">
+                                    <li><a href="./add.php">Add product</a></li>
+                                    <li><a href="./view.php">View product</a></li>
+                                    <li><a href="#">Update product</a></li>
 
-                            </ul>
-                        </li>
-                        <li><a href="#">Shop</a>
-                        <ul class="dropdown">
-                                <li><a href="./clothings.php">Clothings</a></li>
-                                <li><a href="./food.php">Foods & Beverages</a></li>
-                                <li><a href="./shoes.php">Accessories/Shoes</a></li>
-                                <li><a href="./gadget.php">Mobile & Gadgets</a></li>
-                                <li><a href="./beauty.php">Health & Beauty</a></li>
-                                <li><a href="./computer.php">Computer & Accessories</a></li>
-                                <li><a href="./sports.php">Sports & Outdoor</a></li>
-                                <li><a href="#">Others</a></li>
-                            </ul>
-                        </li>
+                                </ul>
+                            </li>
+                            <li><a href="./chat.php">Inbox</a>
+                                <ul class="dropdown">
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
 
-                        <li><a href="#">Sell</a>
-                            <ul class="dropdown">
-                                <li><a href="./add.php">Add product</a></li>
-                                <li><a href="#">View product</a></li>
-                                <li><a href="#">Update product</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Rate</a>
+                                <ul class="dropdown">
+                                    <li><a href="#">View Rating</a></li>
+                                    <li><a href="#">Receive Rating</a></li>
 
-                            </ul>
-                        </li>
-                        <li><a href="#">Inbox</a>
-                            <ul class="dropdown">
-
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
-
-                            </ul>
-                        </li>
-                        <li><a href="#">Rate</a>
-                            <ul class="dropdown">
-                                <li><a href="#">View Rating</a></li>
-                                <li><a href="#">Receive Rating</a></li>
-
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <div id="mobile-menu-wrap"></div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div id="mobile-menu-wrap"></div>
+                </div>
             </div>
         </div>
     </header>
@@ -187,35 +178,7 @@ $name = $row->name;
                         </ul>
                     </div>
 
-                    <div class="filter-widget">
-                        <h4 class="fw-title">Color</h4>
-                        <div class="fw-color-choose">
-                            <div class="cs-item">
-                                <input type="radio" id="cs-black">
-                                <label class="cs-black" for="cs-black">Black</label>
-                            </div>
-                            <div class="cs-item">
-                                <input type="radio" id="cs-violet">
-                                <label class="cs-violet" for="cs-violet">Violet</label>
-                            </div>
-                            <div class="cs-item">
-                                <input type="radio" id="cs-blue">
-                                <label class="cs-blue" for="cs-blue">Blue</label>
-                            </div>
-                            <div class="cs-item">
-                                <input type="radio" id="cs-yellow">
-                                <label class="cs-yellow" for="cs-yellow">Yellow</label>
-                            </div>
-                            <div class="cs-item">
-                                <input type="radio" id="cs-red">
-                                <label class="cs-red" for="cs-red">Red</label>
-                            </div>
-                            <div class="cs-item">
-                                <input type="radio" id="cs-green">
-                                <label class="cs-green" for="cs-green">Green</label>
-                            </div>
-                        </div>
-                    </div>
+                   
                     <div class="filter-widget">
                         <h4 class="fw-title">Size</h4>
                         <div class="fw-size-choose">
@@ -237,18 +200,7 @@ $name = $row->name;
                             </div>
                         </div>
                     </div>
-                    <div class="filter-widget">
-                        <h4 class="fw-title">Tags</h4>
-                        <div class="fw-tags">
-                            <a href="#">Towel</a>
-                            <a href="#">Shoes</a>
-                            <a href="#">Coat</a>
-                            <a href="#">Dresses</a>
-                            <a href="#">Trousers</a>
-                            <a href="#">Men's hats</a>
-                            <a href="#">Backpack</a>
-                        </div>
-                    </div>
+                  
                 </div>
                 <div class="col-lg-9 order-1 order-lg-2">
                     <div class="product-show-option">
@@ -273,7 +225,7 @@ $name = $row->name;
                             <div class="col-lg-4 col-sm-6">
                                 <div class="product-item">
                                     <div class="pi-pic">
-                                        <img src="img/products/bracelet.jpg" alt="">
+                                        <img src="img/produk/bracelet.jpg" alt="">
                                         <div class="sale pp-sale">Sale</div>
                                         <div class="icon">
                                             <i class="icon_heart_alt"></i>
@@ -324,7 +276,7 @@ $name = $row->name;
                             <div class="col-lg-4 col-sm-6">
                                 <div class="product-item">
                                     <div class="pi-pic">
-                                        <img src="img/products/sunglasess.jpg" alt="">
+                                        <img src="img/produk/sunglasess.jpg" alt="">
                                         <div class="icon">
                                             <i class="icon_heart_alt"></i>
                                         </div>
@@ -349,7 +301,7 @@ $name = $row->name;
                             <div class="col-lg-4 col-sm-6">
                                 <div class="product-item">
                                     <div class="pi-pic">
-                                        <img src="img/products/watch.jpg" alt="">
+                                        <img src="img/produk/watch.jpg" alt="">
                                         <div class="icon">
                                             <i class="icon_heart_alt"></i>
                                         </div>
@@ -374,7 +326,7 @@ $name = $row->name;
                             <div class="col-lg-4 col-sm-6">
                                 <div class="product-item">
                                     <div class="pi-pic">
-                                        <img src="img/products/sandal.jpg" alt="">
+                                        <img src="img/produk/sandal.jpg" alt="">
                                         <div class="icon">
                                             <i class="icon_heart_alt"></i>
                                         </div>
@@ -424,7 +376,7 @@ $name = $row->name;
                             <div class="col-lg-4 col-sm-6">
                                 <div class="product-item">
                                     <div class="pi-pic">
-                                        <img src="img/products/tote.jpeg" alt="">
+                                        <img src="img/produk/tote.jpeg" alt="">
                                         <div class="sale pp-sale">Sale</div>
                                         <div class="icon">
                                             <i class="icon_heart_alt"></i>
@@ -450,7 +402,7 @@ $name = $row->name;
                             <div class="col-lg-4 col-sm-6">
                                 <div class="product-item">
                                     <div class="pi-pic">
-                                        <img src="img/products/cap.jpeg" alt="">
+                                        <img src="img/produk/cap.jpeg" alt="">
                                         <div class="icon">
                                             <i class="icon_heart_alt"></i>
                                         </div>
@@ -475,7 +427,7 @@ $name = $row->name;
                             <div class="col-lg-4 col-sm-6">
                                 <div class="product-item">
                                     <div class="pi-pic">
-                                        <img src="img/products/sports.jpeg" alt="">
+                                        <img src="img/produk/sports.jpeg" alt="">
                                         <div class="icon">
                                             <i class="icon_heart_alt"></i>
                                         </div>
@@ -522,7 +474,7 @@ $name = $row->name;
                         </div>
                         <ul>
 
-                            <li>Email: @gmail.com</li>
+                            <li>Email: Unit_Keusahawanan@gmail.com</li>
                         </ul>
                     </div>
                 </div>

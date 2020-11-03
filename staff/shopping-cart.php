@@ -1,3 +1,12 @@
+<?php
+require "../database.php";
+
+$id = $_SESSION['id'];
+$sql = "SELECT * FROM staff WHERE id = $id";
+$row = $conn->query($sql)->fetch_object();
+$name = $row->name;
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -37,11 +46,11 @@
                 <div class="ht-left">
                     <div class="mail-service">
                         <i class=" fa fa-envelope"></i>
-                        hello.colorlib@gmail.com
+                        Unit_Keusahawanan@gmail.com
                     </div>
                 </div>
                 <div class="ht-right">
-                <a href="#" class="login-panel"><i class="fa fa-user"></i>Staff</a>
+                    <li><a href="#" class="login-panel"><i class="fa fa-user"></i><?php echo $name; ?>
                 </div>
             </div>
         </div>
@@ -68,55 +77,9 @@
                         <ul class="nav-right">
                             <li class="heart-icon"><a href="#">
                                     <i class="icon_heart_alt"></i>
-                                    <span>1</span>
+                                    
                                 </a>
-                            </li>
-                            <li class="cart-icon"><a href="#">
-                                    <i class="icon_bag_alt"></i>
-                                    <span>3</span>
-                                </a>
-                                <div class="cart-hover">
-                                    <div class="select-items">
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="si-pic"><img src="img/select-product-1.jpg" alt=""></td>
-                                                    <td class="si-text">
-                                                        <div class="product-selected">
-                                                            <p>$60.00 x 1</p>
-                                                            <h6>Kabino Bedside Table</h6>
-                                                        </div>
-                                                    </td>
-                                                    <td class="si-close">
-                                                        <i class="ti-close"></i>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="si-pic"><img src="img/select-product-2.jpg" alt=""></td>
-                                                    <td class="si-text">
-                                                        <div class="product-selected">
-                                                            <p>$60.00 x 1</p>
-                                                            <h6>Kabino Bedside Table</h6>
-                                                        </div>
-                                                    </td>
-                                                    <td class="si-close">
-                                                        <i class="ti-close"></i>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="select-total">
-                                        <span>total:</span>
-                                        <h5>$120.00</h5>
-                                    </div>
-                                    <div class="select-button">
-                                        <a href="#" class="primary-btn view-card">VIEW CARD</a>
-                                        <a href="#" class="primary-btn checkout-btn">CHECK OUT</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="cart-price">$150.00</li>
+                            </li>                                                       
                         </ul>
                     </div>
                 </div>
@@ -124,44 +87,56 @@
         </div>
         <div class="nav-item">
             <div class="container">
-                <div class="nav-depart">
-                    <div class="depart-btn">
-                        <i class="ti-menu"></i>
-                        <span>All departments</span>
-                        <ul class="depart-hover">
-                            <li class="active"><a href="#">Women’s Clothing</a></li>
-                            <li><a href="#">Men’s Clothing</a></li>
-                            <li><a href="#">Underwear</a></li>
-                            <li><a href="#">Kid's Clothing</a></li>
-                            <li><a href="#">Brand Fashion</a></li>
-                            <li><a href="#">Accessories/Shoes</a></li>
-                            <li><a href="#">Luxury Brands</a></li>
-                            <li><a href="#">Brand Outdoor Apparel</a></li>
+                <div class="d-flex justify-content-center">
+                    <nav class="nav-menu mobile-menu">
+                        <ul>
+                            <li><a href="./index.php">Home</a>
+                                <ul class="dropdown">
+                                    <li><a href="./viewprofile.php">View Profile</a></li>
+                                    <li><a href="./updateprofile.php">Update profile</a></li>
+                                    <li><a href="./changepassword.php">Change Password</a></li>
+                                    <li><a href="./logout.php">Logout</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Shop</a>
+                                <ul class="dropdown">
+                                    <li><a href="./clothings.php">Clothings</a></li>
+                                    <li><a href="./food.php">Foods & Beverages</a></li>
+                                    <li><a href="./shoes.php">Accessories/Shoes</a></li>
+                                    <li><a href="./gadget.php">Mobile & Gadgets</a></li>
+                                    <li><a href="./beauty.php">Health & Beauty</a></li>
+                                    <li><a href="./computer.php">Computer & Accessories</a></li>
+                                    <li><a href="./sports.php">Sports & Outdoor</a></li>
+                                    <li><a href="#">Others</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Sell</a>
+                                <ul class="dropdown">
+                                    <li><a href="./add.php">Add product</a></li>
+                                    <li><a href="./view.php">View product</a></li>
+                                    <li><a href="#">Update product</a></li>
+
+                                </ul>
+                            </li>
+                            <li><a href="./chat.php">Inbox</a>
+                                <ul class="dropdown">
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
+
+                                </ul>
+                            </li>
+                            <li><a href="#">Rate</a>
+                                <ul class="dropdown">
+                                    <li><a href="./shopping-cart.php">View Rating</a></li>
+                                    <li><a href="#">Receive Rating</a></li>
+
+                                </ul>
+                            </li>
                         </ul>
-                    </div>
+                    </nav>
+                    <div id="mobile-menu-wrap"></div>
                 </div>
-                <nav class="nav-menu mobile-menu">
-                    <ul>
-                        <li><a href="./index.php">Home</a></li>
-                        <li><a href="./shop.php">Shop</a></li>
-                        <li><a href="#">Collection</a>
-                            <ul class="dropdown">
-                                <li><a href="#">Men's</a></li>
-                                <li><a href="#">Women's</a></li>
-                                <li><a href="#">Kid's</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Pages</a>
-                            <ul class="dropdown">
-                                <li><a href="./shopping-cart.php">Shopping Cart</a></li>
-                                <li><a href="./check-out.php">Checkout</a></li>
-                                <li><a href="./faq.php">Faq</a></li>
-                                <li><a href="./register.php">Register</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <div id="mobile-menu-wrap"></div>
             </div>
         </div>
     </header>
@@ -175,7 +150,7 @@
                     <div class="breadcrumb-text product-more">
                         <a href="./home.php"><i class="fa fa-home"></i> Home</a>
                         <a href="./shop.php">Shop</a>
-                        <span>Shopping Cart</span>
+                        <span>Like</span>
                     </div>
                 </div>
             </div>
@@ -192,7 +167,7 @@
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Image</th>
+                                    <th>Product</th>
                                     <th class="p-name">Product Name</th>
                                     <th>Price</th>
                                     <th>Quantity</th>
@@ -202,11 +177,11 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="cart-pic first-row"><img src="img/cart-page/product-1.jpg" alt=""></td>
+                                    <td class="cart-pic first-row"><img src="img/produk/baju4.jpg" alt=""></td>
                                     <td class="cart-title first-row">
-                                        <h5>Pure Pineapple</h5>
+                                        <h5>Swag T-Shirt</h5>
                                     </td>
-                                    <td class="p-price first-row">$60.00</td>
+                                    <td class="p-price first-row">RM15.00</td>
                                     <td class="qua-col first-row">
                                         <div class="quantity">
                                             <div class="pro-qty">
@@ -214,15 +189,15 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="total-price first-row">$60.00</td>
+                                    <td class="total-price first-row">RM15.00</td>
                                     <td class="close-td first-row"><i class="ti-close"></i></td>
                                 </tr>
                                 <tr>
-                                    <td class="cart-pic"><img src="img/cart-page/product-2.jpg" alt=""></td>
+                                    <td class="cart-pic"><img src="img/produk/ramen.jpg" alt=""></td>
                                     <td class="cart-title">
-                                        <h5>American lobster</h5>
+                                        <h5>Ramen Cheese</h5>
                                     </td>
-                                    <td class="p-price">$60.00</td>
+                                    <td class="p-price"> RM3.50</td>
                                     <td class="qua-col">
                                         <div class="quantity">
                                             <div class="pro-qty">
@@ -230,15 +205,15 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="total-price">$60.00</td>
+                                    <td class="total-price"> RM3.50</td>
                                     <td class="close-td"><i class="ti-close"></i></td>
                                 </tr>
                                 <tr>
-                                    <td class="cart-pic"><img src="img/cart-page/product-3.jpg" alt=""></td>
+                                    <td class="cart-pic"><img src="img/produk/milk.png" alt=""></td>
                                     <td class="cart-title">
-                                        <h5>Guangzhou sweater</h5>
+                                        <h5>Farm Fresh Full Cream Milk</h5>
                                     </td>
-                                    <td class="p-price">$60.00</td>
+                                    <td class="p-price">RM7.00</td>
                                     <td class="qua-col">
                                         <div class="quantity">
                                             <div class="pro-qty">
@@ -246,35 +221,11 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="total-price">$60.00</td>
+                                    <td class="total-price">RM7.00</td>
                                     <td class="close-td"><i class="ti-close"></i></td>
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="cart-buttons">
-                                <a href="#" class="primary-btn continue-shop">Continue shopping</a>
-                                <a href="#" class="primary-btn up-cart">Update cart</a>
-                            </div>
-                            <div class="discount-coupon">
-                                <h6>Discount Codes</h6>
-                                <form action="#" class="coupon-form">
-                                    <input type="text" placeholder="Enter your codes">
-                                    <button type="submit" class="site-btn coupon-btn">Apply</button>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 offset-lg-4">
-                            <div class="proceed-checkout">
-                                <ul>
-                                    <li class="subtotal">Subtotal <span>$240.00</span></li>
-                                    <li class="cart-total">Total <span>$240.00</span></li>
-                                </ul>
-                                <a href="#" class="proceed-btn">PROCEED TO CHECK OUT</a>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -292,43 +243,12 @@
                             <a href="#"><img src="img/footer-ptss1.png" alt=""></a>
                         </div>
                         <ul>
-                            <li>Address: 60-49 Road 11378 New York</li>
-                            <li>Email: hello.colorlib@gmail.com</li>
+                            
+                            <li>Email: Unit_Keusahawanan@gmail.com</li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-2 offset-lg-1">
-                    <div class="footer-widget">
-                        <h5>Information</h5>
-                        <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Checkout</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Serivius</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="footer-widget">
-                        <h5>My Account</h5>
-                        <ul>
-                            <li><a href="#">My Account</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Shopping Cart</a></li>
-                            <li><a href="#">Shop</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="newslatter-item">
-                        <h5>Join Our Newsletter Now</h5>
-                        <p>Get E-mail updates about our latest shop and special offers.</p>
-                        <form action="#" class="subscribe-form">
-                            <input type="text" placeholder="Enter Your Mail">
-                            <button type="button">Subscribe</button>
-                        </form>
-                    </div>
-                </div>
+
             </div>
         </div>
         <div class="copyright-reserved">
@@ -339,9 +259,6 @@
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </div>
-                        <div class="payment-pic">
-                            <img src="img/payment-method.png" alt="">
                         </div>
                     </div>
                 </div>

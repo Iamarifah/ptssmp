@@ -46,7 +46,7 @@ $name = $row->name;
                 <div class="ht-left">
                     <div class="mail-service">
                         <i class=" fa fa-envelope"></i>
-                        @gmail.com
+                        Unit_Keusahawanan@gmail.com
                     </div>
                 </div>
                 <div class="ht-right">
@@ -77,7 +77,7 @@ $name = $row->name;
                     <div class="col-lg-3 text-right col-md-3">
                         <ul class="nav-right">
                             <li class="heart-icon">
-                                <a href="#">
+                                <a href="./shopping-cart.php">
                                     <i class="icon_heart_alt"></i>
 
                                 </a>
@@ -90,57 +90,56 @@ $name = $row->name;
         </div>
         <div class="nav-item">
             <div class="container">
+                <div class="d-flex justify-content-center">
+                    <nav class="nav-menu mobile-menu">
+                        <ul>
+                            <li><a href="./index.php">Home</a>
+                                <ul class="dropdown">
+                                    <li><a href="./viewprofile.php">View Profile</a></li>
+                                    <li><a href="./updateprofile.php">Update profile</a></li>
+                                    <li><a href="./changepassword.php">Change Password</a></li>
+                                    <li><a href="./logout.php">Logout</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Shop</a>
+                                <ul class="dropdown">
+                                    <li><a href="./clothings.php">Clothings</a></li>
+                                    <li><a href="./food.php">Foods & Beverages</a></li>
+                                    <li><a href="./shoes.php">Accessories/Shoes</a></li>
+                                    <li><a href="./gadget.php">Mobile & Gadgets</a></li>
+                                    <li><a href="./beauty.php">Health & Beauty</a></li>
+                                    <li><a href="./computer.php">Computer & Accessories</a></li>
+                                    <li><a href="./sports.php">Sports & Outdoor</a></li>
+                                    <li><a href="#">Others</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Sell</a>
+                                <ul class="dropdown">
+                                    <li><a href="./add.php">Add product</a></li>
+                                    <li><a href="./view.php">View product</a></li>
+                                    <li><a href="#">Update product</a></li>
 
-                <nav class="nav-menu mobile-menu">
-                    <ul>
-                        <li><a href="./index.php">Home</a>
-                            <ul class="dropdown">
-                                <li><a href="./viewprofile.php">View Profile</a></li>
-                                <li><a href="./updateprofile.php">Update profile</a></li>
-                                <li><a href="./changepassword.php">Change Password</a></li>
-                                <li><a href="./logout.php">Logout</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./chat.php">Inbox</a>
+                                <ul class="dropdown">
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
 
-                            </ul>
-                        </li>
-                        <li><a href="./shop.php">Shop</a>
-                            <ul class="dropdown">
-                                <li><a href="./clothings.php">Clothings</a></li>
-                                <li><a href="./food.php">Foods & Beverages</a></li>
-                                <li><a href="./shoes.php">Accessories/Shoes</a></li>
-                                <li><a href="./gadget.php">Mobile & Gadgets</a></li>
-                                <li><a href="./beauty.php">Health & Beauty</a></li>
-                                <li><a href="./computer.php">Computer & Accessories</a></li>
-                                <li><a href="./sports.php">Sports & Outdoor</a></li>
-                                <li><a href="#">Others</a></li>
-                            </ul>
-                        </li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Rate</a>
+                                <ul class="dropdown">
+                                    <li><a href="#">View Rating</a></li>
+                                    <li><a href="#">Receive Rating</a></li>
 
-                        <li><a href="#">Sell</a>
-                            <ul class="dropdown">
-                                <li><a href="./add.php">Add product</a></li>
-                                <li><a href="#">View product</a></li>
-                                <li><a href="#">Update product</a></li>
-
-                            </ul>
-                        </li>
-                        <li><a href="./chat.php">Inbox</a>
-                            <ul class="dropdown">
-
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
-
-                            </ul>
-                        </li>
-                        <li><a href="#">Rate</a>
-                            <ul class="dropdown">
-                                <li><a href="#">View Rating</a></li>
-                                <li><a href="#">Receive Rating</a></li>
-
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <div id="mobile-menu-wrap"></div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div id="mobile-menu-wrap"></div>
+                </div>
             </div>
         </div>
     </header>
@@ -161,12 +160,12 @@ $name = $row->name;
     </div>
     <!-- Breadcrumb Section Begin -->
     <div class="container">
-        <h3 align="center"> Chat</h3><br />
+        <h3 align="center">Chat Platform</h3><br />
         <br />
         <br />
 
         <div class="table-responsive">
-            <h4 align="center">Online user</h4>
+            <h4 align="center"></h4>
             <p align="right">Hi - <?php echo $name;
                                     ?> </p>
             <div id="user_details"></div>
@@ -189,7 +188,7 @@ $name = $row->name;
                         </div>
                         <ul>
 
-                            <li>Email: @gmail.com</li>
+                            <li>Email: Unit_Keusahawanan@gmail.com</li>
                         </ul>
                     </div>
                 </div>

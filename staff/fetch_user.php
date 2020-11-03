@@ -10,7 +10,7 @@ while ($row = $result->fetch_all())
 
 $output = '<table class = "table table-bordered table-striped">
 <tr>
-<td>Username</td>
+<td>Name</td>
 <td>Status</td>
 <td>Action</td>
 </tr>

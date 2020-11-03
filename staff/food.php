@@ -46,7 +46,7 @@ $name = $row->name;
                 <div class="ht-left">
                     <div class="mail-service">
                         <i class=" fa fa-envelope"></i>
-                        @gmail.com
+                        Unit_Keusahawanan@gmail.com
                     </div>
                 </div>
                 <div class="ht-right">
@@ -91,57 +91,56 @@ $name = $row->name;
         </div>
         <div class="nav-item">
             <div class="container">
-                
-                <nav class="nav-menu mobile-menu">
-                    <ul>
-                        <li><a href="./index.php">Home</a>
-                        <ul class="dropdown">
-                                <li><a href="#">View Profile</a></li>
-                                <li><a href="#">Update profile</a></li>
-                                <li><a href="./changepassword.php">Change Password</a></li>
-                                <li><a href="./logout.php">Logout</a></li>
+                <div class="d-flex justify-content-center">
+                    <nav class="nav-menu mobile-menu">
+                        <ul>
+                            <li><a href="./index.php">Home</a>
+                                <ul class="dropdown">
+                                    <li><a href="./viewprofile.php">View Profile</a></li>
+                                    <li><a href="./updateprofile.php">Update profile</a></li>
+                                    <li><a href="./changepassword.php">Change Password</a></li>
+                                    <li><a href="./logout.php">Logout</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Shop</a>
+                                <ul class="dropdown">
+                                    <li><a href="./clothings.php">Clothings</a></li>
+                                    <li><a href="./food.php">Foods & Beverages</a></li>
+                                    <li><a href="./shoes.php">Accessories/Shoes</a></li>
+                                    <li><a href="./gadget.php">Mobile & Gadgets</a></li>
+                                    <li><a href="./beauty.php">Health & Beauty</a></li>
+                                    <li><a href="./computer.php">Computer & Accessories</a></li>
+                                    <li><a href="./sports.php">Sports & Outdoor</a></li>
+                                    <li><a href="#">Others</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Sell</a>
+                                <ul class="dropdown">
+                                    <li><a href="./add.php">Add product</a></li>
+                                    <li><a href="./view.php">View product</a></li>
+                                    <li><a href="#">Update product</a></li>
 
-                            </ul>
-                        </li>
-                        <li><a href="#">Shop</a>
-                        <ul class="dropdown">
-                                <li><a href="./clothings.php">Clothings</a></li>
-                                <li><a href="./food.php">Foods & Beverages</a></li>
-                                <li><a href="./shoes.php">Accessories/Shoes</a></li>
-                                <li><a href="./gadget.php">Mobile & Gadgets</a></li>
-                                <li><a href="./beauty.php">Health & Beauty</a></li>
-                                <li><a href="./computer.php">Computer & Accessories</a></li>
-                                <li><a href="./sports.php">Sports & Outdoor</a></li>
-                                <li><a href="#">Others</a></li>
-                            </ul>
-                        </li>
+                                </ul>
+                            </li>
+                            <li><a href="./chat.php">Inbox</a>
+                                <ul class="dropdown">
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
 
-                        <li><a href="#">Sell</a>
-                            <ul class="dropdown">
-                                <li><a href="./add.php">Add product</a></li>
-                                <li><a href="#">View product</a></li>
-                                <li><a href="#">Update product</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Rate</a>
+                                <ul class="dropdown">
+                                    <li><a href="#">View Rating</a></li>
+                                    <li><a href="#">Receive Rating</a></li>
 
-                            </ul>
-                        </li>
-                        <li><a href="#">Inbox</a>
-                            <ul class="dropdown">
-
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
-
-                            </ul>
-                        </li>
-                        <li><a href="#">Rate</a>
-                            <ul class="dropdown">
-                                <li><a href="#">View Rating</a></li>
-                                <li><a href="#">Receive Rating</a></li>
-
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <div id="mobile-menu-wrap"></div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div id="mobile-menu-wrap"></div>
+                </div>
             </div>
         </div>
     </header>
@@ -504,7 +503,7 @@ $name = $row->name;
                         </div>
                         <ul>
 
-                            <li>Email: @gmail.com</li>
+                            <li>Email: Unit_Keusahawanan@gmail.com</li>
                         </ul>
                     </div>
                 </div>

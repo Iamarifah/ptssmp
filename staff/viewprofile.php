@@ -46,7 +46,7 @@ $name = $row->name;
                 <div class="ht-left">
                     <div class="mail-service">
                         <i class=" fa fa-envelope"></i>
-                        @gmail.com
+                        Unit_Keusahawanan@gmail.com
                     </div>
                 </div>
                 <div class="ht-right">
@@ -92,56 +92,56 @@ $name = $row->name;
         </div>
         <div class="nav-item">
             <div class="container">
+                <div class="d-flex justify-content-center">
+                    <nav class="nav-menu mobile-menu">
+                        <ul>
+                            <li><a href="./index.php">Home</a>
+                                <ul class="dropdown">
+                                    <li><a href="./viewprofile.php">View Profile</a></li>
+                                    <li><a href="./updateprofile.php">Update profile</a></li>
+                                    <li><a href="./changepassword.php">Change Password</a></li>
+                                    <li><a href="./logout.php">Logout</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Shop</a>
+                                <ul class="dropdown">
+                                    <li><a href="./clothings.php">Clothings</a></li>
+                                    <li><a href="./food.php">Foods & Beverages</a></li>
+                                    <li><a href="./shoes.php">Accessories/Shoes</a></li>
+                                    <li><a href="./gadget.php">Mobile & Gadgets</a></li>
+                                    <li><a href="./beauty.php">Health & Beauty</a></li>
+                                    <li><a href="./computer.php">Computer & Accessories</a></li>
+                                    <li><a href="./sports.php">Sports & Outdoor</a></li>
+                                    <li><a href="#">Others</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Sell</a>
+                                <ul class="dropdown">
+                                    <li><a href="./add.php">Add product</a></li>
+                                    <li><a href="./view.php">View product</a></li>
+                                    <li><a href="#">Update product</a></li>
 
-                <nav class="nav-menu mobile-menu">
-                    <ul>
-                        <li><a href="./index.php">Home</a>
-                            <ul class="dropdown">
-                                <li><a href="./viewprofile.php">View Profile</a></li>
-                                <li><a href="./updateprofile.php">Update profile</a></li>
-                                <li><a href="./changepassword.php">Change Password</a></li>
-                                <li><a href="./logout.php">Logout</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./chat.php">Inbox</a>
+                                <ul class="dropdown">
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
 
-                            </ul>
-                        </li>
-                        <li><a href="#">Shop</a>
-                            <ul class="dropdown">
-                                <li><a href="./clothings.php">Clothings</a></li>
-                                <li><a href="./food.php">Foods & Beverages</a></li>
-                                <li><a href="./shoes.php">Accessories/Shoes</a></li>
-                                <li><a href="./gadget.php">Mobile & Gadgets</a></li>
-                                <li><a href="./beauty.php">Health & Beauty</a></li>
-                                <li><a href="./computer.php">Computer & Accessories</a></li>
-                                <li><a href="./sports.php">Sports & Outdoor</a></li>
-                                <li><a href="#">Others</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Sell</a>
-                            <ul class="dropdown">
-                                <li><a href="./add.php">Add product</a></li>
-                                <li><a href="./view.php">View product</a></li>
-                                <li><a href="#">Update product</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Rate</a>
+                                <ul class="dropdown">
+                                    <li><a href="#">View Rating</a></li>
+                                    <li><a href="#">Receive Rating</a></li>
 
-                            </ul>
-                        </li>
-                        <li><a href="#">Inbox</a>
-                            <ul class="dropdown">
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
-
-                            </ul>
-                        </li>
-                        <li><a href="#">Rate</a>
-                            <ul class="dropdown">
-                                <li><a href="#">View Rating</a></li>
-                                <li><a href="#">Receive Rating</a></li>
-
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <div id="mobile-menu-wrap"></div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div id="mobile-menu-wrap"></div>
+                </div>
             </div>
         </div>
     </header>
@@ -163,62 +163,67 @@ $name = $row->name;
     <!-- Breadcrumb Form Section Begin -->
 
     <style>
-        
         .pi-text {
             padding: 50px;
             padding-top: 10px;
         }
-      
-      .form-group {
-          padding: 6px;
-          
-      }
-      .profile-image {
-        
+
+        .form-group {
+            padding: 6px;
+
+        }
+
+        .profile-image {
+
             justify-content: center;
             padding: 10px;
             width: 350%;
             border-style: ridge;
-            
-      }
-      p {
-          background-color: black;
-          color: white;
-          
-      }
+
+        }
+
+        p {
+            background-color: black;
+            color: white;
+
+        }
+
+        img {
+            border-radius: 50%;
+        }
     </style>
 
     <div class="container">
-            <div class="row">
-                <div class="profile-detail">
-                    <div class="profile-image">
+        <div class="row">
+            <div class="profile-detail">
+                <div class="profile-image">
                     <h3 class="text-center">PROFILE</h3>
                     <p>Basic information</p>
 
-                        <div class="pi-pic text-left">
-                            <img src="img/attacker.jpg" alt="" height="300" width="300">
-                        </div>
-                        
-                        <div class="form-group">                          
-                            <div class="name">NAME : Nur Alia Bt Shukri</div>
-                        </div>
-                        <div class="form-group">                          
-                            <div class="department">Department : JTMK</div>
-                        </div>
+                    <div class="pi-pic text-left">
+                        <img src="img/me1.jpg" alt="Avatar" height="150" width="150">
+                    </div>
 
-                        <p>Contact information</p>
+                    <div class="form-group">
+                        <div class="name">NAME : Siti Nurarifah Bt Zubir</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="department">DEPARTMENT : JTMK</div>
+                    </div>
 
-                        <div class="form-group">
-                            <div class="email">EMAIL : ella7@gmail.com</div>                            
-                        </div>
-                        <div class="form-group">                          
-                            <div class="phone">PHONE NUMBER : 0123456789</div>
-                        </div>
+                    <p>Contact information</p>
+
+                    <div class="form-group">
+                        <div class="email">EMAIL : ella7@gmail.com</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="phone">PHONE NUMBER : 0123456789</div>
                     </div>
                 </div>
-                <br>
-     
             </div>
+            <br>
+
+        </div>
     </div>
 
     <!-- Footer Section Begin -->
@@ -232,7 +237,7 @@ $name = $row->name;
                         </div>
                         <ul>
 
-                            <li>Email: @gmail.com</li>
+                            <li>Email: Unit_Keusahawanan@gmail.com</li>
                         </ul>
                     </div>
                 </div>

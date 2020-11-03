@@ -37,7 +37,7 @@
                 <div class="ht-left">
                     <div class="mail-service">
                         <i class=" fa fa-envelope"></i>
-                        @gmail.com
+                        Unit_Keusahawanan@gmail.com
                     </div>
                 </div>
                 <div class="ht-right">
@@ -127,7 +127,7 @@
                         <h2>Login</h2>
                         <form action="semak.php" method="POST">
                             <div class="group-input">
-                                <label for="username">Username or email address *</label>
+                                <label for="username">IC or Matric Number *</label>
                                 <input type="text" id="uname" name="uname">
                             </div>
                             <div class="group-input">

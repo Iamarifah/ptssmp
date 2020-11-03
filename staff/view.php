@@ -46,7 +46,7 @@ $name = $row->name;
                 <div class="ht-left">
                     <div class="mail-service">
                         <i class=" fa fa-envelope"></i>
-                        @gmail.com
+                        Unit_Keusahawanan@gmail.com
                     </div>
                 </div>
                 <div class="ht-right">
@@ -88,57 +88,56 @@ $name = $row->name;
         </div>
         <div class="nav-item">
             <div class="container">
+                <div class="d-flex justify-content-center">
+                    <nav class="nav-menu mobile-menu">
+                        <ul>
+                            <li><a href="./index.php">Home</a>
+                                <ul class="dropdown">
+                                    <li><a href="./viewprofile.php">View Profile</a></li>
+                                    <li><a href="./updateprofile.php">Update profile</a></li>
+                                    <li><a href="./changepassword.php">Change Password</a></li>
+                                    <li><a href="./logout.php">Logout</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Shop</a>
+                                <ul class="dropdown">
+                                    <li><a href="./clothings.php">Clothings</a></li>
+                                    <li><a href="./food.php">Foods & Beverages</a></li>
+                                    <li><a href="./shoes.php">Accessories/Shoes</a></li>
+                                    <li><a href="./gadget.php">Mobile & Gadgets</a></li>
+                                    <li><a href="./beauty.php">Health & Beauty</a></li>
+                                    <li><a href="./computer.php">Computer & Accessories</a></li>
+                                    <li><a href="./sports.php">Sports & Outdoor</a></li>
+                                    <li><a href="#">Others</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Sell</a>
+                                <ul class="dropdown">
+                                    <li><a href="./add.php">Add product</a></li>
+                                    <li><a href="./view.php">View product</a></li>
+                                    <li><a href="#">Update product</a></li>
 
-                <nav class="nav-menu mobile-menu">
-                    <ul>
-                        <li><a href="./index.php">Home</a>
-                            <ul class="dropdown">
-                                <li><a href="./viewprofile.php">View Profile</a></li>
-                                <li><a href="./updateprofile.php">Update profile</a></li>
-                                <li><a href="./changepassword.php">Change Password</a></li>
-                                <li><a href="./logout.php">Logout</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./chat.php">Inbox</a>
+                                <ul class="dropdown">
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
 
-                            </ul>
-                        </li>
-                        <li><a href="./shop.php">Shop</a>
-                            <ul class="dropdown">
-                                <li><a href="./clothings.php">Clothings</a></li>
-                                <li><a href="./food.php">Foods & Beverages</a></li>
-                                <li><a href="./shoes.php">Accessories/Shoes</a></li>
-                                <li><a href="./gadget.php">Mobile & Gadgets</a></li>
-                                <li><a href="./beauty.php">Health & Beauty</a></li>
-                                <li><a href="./computer.php">Computer & Accessories</a></li>
-                                <li><a href="./sports.php">Sports & Outdoor</a></li>
-                                <li><a href="#">Others</a></li>
-                            </ul>
-                        </li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Rate</a>
+                                <ul class="dropdown">
+                                    <li><a href="#">View Rating</a></li>
+                                    <li><a href="#">Receive Rating</a></li>
 
-                        <li><a href="#">Sell</a>
-                            <ul class="dropdown">
-                                <li><a href="./add.php">Add product</a></li>
-                                <li><a href="#">View product</a></li>
-                                <li><a href="#">Update product</a></li>
-
-                            </ul>
-                        </li>
-                        <li><a href="#">Inbox</a>
-                            <ul class="dropdown">
-
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
-
-                            </ul>
-                        </li>
-                        <li><a href="#">Rate</a>
-                            <ul class="dropdown">
-                                <li><a href="#">View Rating</a></li>
-                                <li><a href="#">Receive Rating</a></li>
-
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <div id="mobile-menu-wrap"></div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div id="mobile-menu-wrap"></div>
+                </div>
             </div>
         </div>
     </header>
@@ -219,32 +218,34 @@ $name = $row->name;
                     </div>
 
                     <div class="product-list">
-                        <?php
+                        <div class="row">
+                            <?php
 
-                        $sql = "SELECT * FROM product_image";
-                        $result = $conn->query($sql);
-                        while ($row = $result->fetch_object()) {
+                            $sql = "SELECT * FROM product_image";
+                            $result = $conn->query($sql);
+                            while ($row = $result->fetch_object()) {
 
-                            $product_name = $row->product_name;
-                            $product_category = $row->product_category;
-                            $available_quantity = $row->available_quantity;
-                            $product_description = $row->product_description;
-                            $product_price = $row->product_price;
+                                $product_name = $row->product_name;
+                                $product_category = $row->product_category;
+                                $available_quantity = $row->available_quantity;
+                                $product_description = $row->product_description;
+                                $product_price = $row->product_price;
 
-                        ?>
+                            ?>
 
-                            <div class="row">
+
                                 <div class="product-detail">
                                     <div class="product-item">
                                         <div class="pi-pic">
-                                            <img src="img/products/<?php echo $product_name; ?>.jpg" alt="" height="300" width="300">
+                                           <a href="./product-detail.php"><img src="img/products/<?php echo $product_name; ?>.jpg" alt=""
+                                            onclick="myfunction()" style="cursor:pointer;" height="300" width="300"></a>
 
                                             <div class="icon">
                                                 <i class="icon_heart_alt"></i>
                                             </div>
                                             <ul>
                                                 <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                                                <li class="quick-view"><a href="#">+ Quick View</a></li>
+                                                <li class="quick-view" data-toggle="modal" data-target="#product_view"><a href="#">+ Quick View</a></li>
                                                 <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
 
                                             </ul>
@@ -270,9 +271,9 @@ $name = $row->name;
                                 </div>
                                 <br>
                             <?php
-                        }
+                            }
                             ?>
-                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -293,7 +294,7 @@ $name = $row->name;
                         </div>
                         <ul>
 
-                            <li>Email: @gmail.com</li>
+                            <li>Email: Unit_Keusahawanan@gmail.com</li>
                         </ul>
                     </div>
                 </div>
@@ -317,17 +318,71 @@ $name = $row->name;
     </footer>
     <!-- Footer Section End -->
 
-    <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery.zoom.min.js"></script>
-    <script src="js/jquery.dd.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
+    <style>
+        .product_view .modal-dialog {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .pre-cost {
+            text-decoration: line-through;
+            color: #a5a5a5;
+        }
+
+        .space-ten {
+            padding: 10px 0;
+        }
+    </style>
+
+    <!-- Quick view begin -->
+    <div class="modal fade product_view" id="product_view">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 product_img">
+                            <img src="img/products/<?php echo $product_name; ?>.jpg" class="img-responsive">
+                        </div>
+                        <div class="col-md-6 product_content">
+                            <h4><b><?php echo $product_description; ?></b></h4>
+                            <div class="rating">
+                                <div class="stars">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    (5 reviews)
+                                </div>
+                            </div>
+                            <div class="pi-text">
+
+                                <a href="#">
+                                    <h5></h5>
+                                    <p><?php echo $product_description; ?></p>
+                                </a>
+                                <div class="product_price">
+                                    <h3>RM <?php echo $product_price; ?></h3>
+                                    <span></span>
+                                    <div class="available_quantity">
+                                        <p>Available : <?php echo $available_quantity; ?></p>
+                                    </div>
+                                </div>
+
+                                <!-- Js Plugins -->
+                                <script src="js/jquery-3.3.1.min.js"></script>
+                                <script src="js/bootstrap.min.js"></script>
+                                <script src="js/jquery-ui.min.js"></script>
+                                <script src="js/jquery.countdown.min.js"></script>
+                                <script src="js/jquery.nice-select.min.js"></script>
+                                <script src="js/jquery.zoom.min.js"></script>
+                                <script src="js/jquery.dd.min.js"></script>
+                                <script src="js/jquery.slicknav.js"></script>
+                                <script src="js/owl.carousel.min.js"></script>
+                                <script src="js/main.js"></script>
+
+
 </body>
 
 </html>
