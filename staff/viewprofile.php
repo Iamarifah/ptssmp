@@ -195,34 +195,50 @@ $name = $row->name;
 
     <div class="container">
         <div class="row">
-            <div class="profile-detail">
-                <div class="profile-image">
-                    <h3 class="text-center">PROFILE</h3>
-                    <p>Basic information</p>
+            <?php
 
-                    <div class="pi-pic text-left">
-                        <img src="img/me1.jpg" alt="Avatar" height="150" width="150">
-                    </div>
+            $sql = "SELECT * FROM profile";
+            $result = $conn->query($sql);
+            while ($row = $result->fetch_object()) {
 
-                    <div class="form-group">
-                        <div class="name">NAME : Siti Nurarifah Bt Zubir</div>
-                    </div>
-                    <div class="form-group">
-                        <div class="department">DEPARTMENT : JTMK</div>
-                    </div>
+                $name = $row->name;
+                $profile_image = $row->profile_image;
+                $department = $row->department;
+                $email = $row->email;
+                $phone = $row->phone;
 
-                    <p>Contact information</p>
 
-                    <div class="form-group">
-                        <div class="email">EMAIL : ella7@gmail.com</div>
-                    </div>
-                    <div class="form-group">
-                        <div class="phone">PHONE NUMBER : 0123456789</div>
+            ?>
+                <div class="profile-detail">
+                    <div class="profile-image">
+                        <h3 class="text-center">PROFILE</h3>
+                        <p>Basic information</p>
+
+                        <div class="pi-pic text-left">
+                            <img src="img/products/<?php echo $profile_image; ?>.jpg" alt="Avatar" height="150" width="150">
+                        </div>
+
+                        <div class="form-group">
+                            <div class="name">NAME :<?php echo $name; ?></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="department">DEPARTMENT :<?php echo $department; ?></div>
+                        </div>
+
+                        <p>Contact information</p>
+
+                        <div class="form-group">
+                            <div class="email">EMAIL :<?php echo $email; ?></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="phone">PHONE NUMBER :<?php echo $phone; ?></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <br>
-
+                <br>
+            <?php
+            }
+            ?>
         </div>
     </div>
 

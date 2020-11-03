@@ -356,7 +356,7 @@ $name = $row->name;
         .form-container {
             max-width: 300px;
             padding: 20px;
-            
+
             background-color: white;
         }
 
@@ -422,8 +422,8 @@ $name = $row->name;
         <div class="container-fliud">
 
             <?php
-
-            $sql = "SELECT * FROM product_image";
+            $product_id = $_GET['product_id'];
+            $sql = "SELECT * FROM product_image WHERE product_id = $product_id";           
             $result = $conn->query($sql);
             while ($row = $result->fetch_object()) {
 
@@ -462,7 +462,7 @@ $name = $row->name;
                                 </div>
                                 <span class="review-no">41 reviews</span>
                             </div>
-                            <p class="product-description"><?php echo $product_description; ?></p>
+                            <h3 class="product-description"><?php echo $product_description; ?></h3>
                             <h4 class="price">RM <?php echo $product_price; ?></h4>
                             <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
 
