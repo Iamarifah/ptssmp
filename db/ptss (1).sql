@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 20, 2020 at 03:25 PM
+-- Generation Time: Nov 03, 2020 at 02:11 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -61,6 +61,7 @@ CREATE TABLE `chat_message` (
 CREATE TABLE `product_image` (
   `product_id` int(11) NOT NULL,
   `product_name` varchar(100) NOT NULL,
+  `product_title` varchar(500) NOT NULL,
   `product_category` varchar(50) NOT NULL,
   `available_quantity` int(3) NOT NULL,
   `product_description` varchar(500) NOT NULL,
@@ -71,11 +72,12 @@ CREATE TABLE `product_image` (
 -- Dumping data for table `product_image`
 --
 
-INSERT INTO `product_image` (`product_id`, `product_name`, `product_category`, `available_quantity`, `product_description`, `product_price`) VALUES
-(4, 'beannie', 'Accessories & Shoes', 1, 'ring cap', 'RM 10.00'),
-(11, 'choc', 'Foods & Beverages', 3, 'chocojar', 'RM 10.00'),
-(12, 'case', 'Accessories & Shoes', 4, 'bestfriend casing', 'RM 8.50'),
-(14, 'makeup', 'Health & Beauty', 4, 'Glow makeup', '15.90');
+INSERT INTO `product_image` (`product_id`, `product_name`, `product_title`, `product_category`, `available_quantity`, `product_description`, `product_price`) VALUES
+(12, 'case', 'CASING IP11 11PRO 11PRO MAX', 'Accessories & Shoes', 4, 'bestfriend casing', '8.50'),
+(14, 'makeup', 'Matte Shimmer Nude Eyeshadow Makeup Palette', 'Health & Beauty', 4, 'Glow makeup', '15.90'),
+(17, 'brush', 'Soft Makeup Brush', 'Health & Beauty', 3, 'makeup brush', '10.00'),
+(18, 'pepero', '[Mix & Match] Lotte Pepero Almond 32g', 'Foods & Beverages', 5, 'You can savour delicious Pepero  Stick ', '5.90'),
+(19, 'haus', 'HAUS BOOM SPARKLING REAL JUICE 275ML', 'Foods & Beverages', 6, '100% HALAL SPARKLING JUICE\r\nMADE IN MALAYSIA', '3.90');
 
 -- --------------------------------------------------------
 
@@ -211,7 +213,7 @@ ALTER TABLE `chat_message`
 -- AUTO_INCREMENT for table `product_image`
 --
 ALTER TABLE `product_image`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `profile`
