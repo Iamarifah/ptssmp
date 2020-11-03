@@ -313,3 +313,59 @@ $name = $row->name;
     </body>
 
 </html>
+
+<script>
+    $(document).ready(function() {
+
+        fetch_user();
+
+        function fetch_user() {
+            $.ajax({
+                url: "fetch_user.php",
+                method: "POST",
+                success: function(data) {
+                    $('#user_details').html(data);
+                }
+            })
+        }
+
+        function chat_dialog(to_user_id, to_user_name) {
+            var modal_content = '<div id="user_dialog_' + to_user_id + '"class = "user_dialog" title="' + to_user_name + '">';
+            modal_content += '<div style = "height=400px; border:1px solid #ccc; overflow-y: scroll; margin-bottom:20px; padding:100px; class="chat_history" data-touserid="' + to_user_id + '" id="chat_history_' + to_user_id + '">';
+            modal_content += '</div>';
+            modal_content += '<textarea name = "chat_message_' + to_user_id + '" id= "chat_message_' + to_user_id + '" class = "form-control"></textarea>';
+            modal_content += '<div class ="form=group" align = "right">';
+            modal_content += '<button type="button" name="send_chat" style="margin-top:20px;" id="' +
+                to_user_id + '" class="btn btn-info send_chat">Send</button></div></div>';
+            modal_content += '</div>';
+            $('#user_model_details').html(modal_content);
+
+        }
+        $(document).on('click', '.start_chat', function() {
+            var to_user_id = $(this).data('touserid');
+            var to_user_name = $(this).data('tousername');
+            chat_dialog(to_user_id, to_user_name);
+            $("#user_dialog_" + to_user_id).dialog({
+                autoOpen: false,
+                width: 400,
+                height: 410
+            });
+            $("#user_dialog_" + to_user_id).dialog('open');
+        });
+
+        $(document).on('click', '.send_chat', function() {
+            var to_user_id = $(this).attr('id');
+            var chat_message = $('#chat_message_' +to_user_id).val();
+            $.ajax({
+                url:"insertchat.php",
+                method:"POST",
+                data:{to_user_id: to_user_id, chat_message:chat_message},
+                success:function(data)
+                {
+                    $('#chat_message_' +to_user_id).val('');
+                    $('#chat_history_' +to_user_id).html(data);
+                }
+            })
+        });
+    });
+</script>

@@ -175,9 +175,17 @@ $name = $row->name;
 
     <form action="add-process.php" method="post" enctype="multipart/form-data">
         <div class="form-group">
-            <label class="col-md-4 control-label" for="product_name">PRODUCT NAME</label>
+            <label class="col-md-4 control-label" for="product_name">PRODUCT IMAGE</label>
             <div class="col-md-4">
-                <input id="product_name" name="product_name" placeholder="PRODUCT NAME" class="form-control input-md" required="" type="text">
+                <input id="product_name" name="product_name" placeholder="PRODUCT IMAGE" class="form-control input-md" required="" type="text">
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="product_title">PRODUCT NAME</label>
+            <div class="col-md-4">
+                <input id="product_title" name="product_title" placeholder="PRODUCT NAME" class="form-control input-md" required="" type="text">
 
             </div>
         </div>

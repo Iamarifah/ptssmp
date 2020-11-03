@@ -355,7 +355,8 @@ $name = $row->name;
         /* Add styles to the form container */
         .form-container {
             max-width: 300px;
-            padding: 10px;
+            padding: 20px;
+            
             background-color: white;
         }
 
@@ -409,12 +410,11 @@ $name = $row->name;
             box-sizing: border-box;
         }
 
-        #btn-chat{
+        #btn-chat {
             width: 30%;
             margin-top: 15px;
             margin-left: 200px;
         }
-
     </style>
 
     <div class="container">
@@ -428,6 +428,7 @@ $name = $row->name;
             while ($row = $result->fetch_object()) {
 
                 $product_name = $row->product_name;
+                $product_title = $row->product_title;
                 $product_category = $row->product_category;
                 $available_quantity = $row->available_quantity;
                 $product_description = $row->product_description;
@@ -450,7 +451,7 @@ $name = $row->name;
 
                         </div>
                         <div class="details col-md-6">
-                            <h3 class="product-title">men's shoes fashion</h3>
+                            <h3 class="product-title"><?php echo $product_title; ?></h3>
                             <div class="rating">
                                 <div class="stars">
                                     <span class="fa fa-star checked"></span>
@@ -464,12 +465,12 @@ $name = $row->name;
                             <p class="product-description"><?php echo $product_description; ?></p>
                             <h4 class="price">RM <?php echo $product_price; ?></h4>
                             <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
-                            
+
 
                             <div class="action">
                                 <a href="#"><button class="comment btn btn-default" onclick="openForm()" aria-hidden="true" type="button"><span class="fa fa-comment"></span></button></a>
                                 <div class="chat-popup" id="myForm">
-                                <button type="btn btn-close pull-right" class="close" aria-label="Close" onclick="closeForm()"><span aria-hidden="true">&times;</span></button>
+                                    <button type="btn btn-close pull-right" class="close" aria-label="Close" onclick="closeForm()"><span aria-hidden="true">&times;</span></button>
                                     <form action="#" class="form-container">
 
                                         <label for="msg"><b><?php echo $name; ?></b></label>
@@ -477,7 +478,7 @@ $name = $row->name;
                                         <div class="panel-footer">
                                             <div class="input-group">
                                                 <input id="btn-input" type="text" class="form-control input-sm chat_input" placeholder="Write your message here..." />
-                                                                                              
+
                                             </div>
                                         </div>
                                         <button class="btn btn-primary btn-sm" id="btn-chat" width="10px">Send</button>

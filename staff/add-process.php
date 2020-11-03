@@ -9,14 +9,15 @@ $targetFilePath = $targetDir . $product_name;
 $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
 
 $product_name=$_POST['product_name'];
+$product_title=$_POST['product_title'];
 $product_category=$_POST['product_category'];
 $available_quantity=$_POST['available_quantity'];
 $product_description=$_POST['product_description'];
 $product_price=$_POST['product_price'];
 
 
-$sql="INSERT INTO product_image(product_name,product_category,available_quantity,product_description,product_price) 
-VALUE('$product_name','$product_category','$available_quantity','$product_description','$product_price')";
+$sql="INSERT INTO product_image(product_name,product_title,product_category,available_quantity,product_description,product_price) 
+VALUE('$product_name','$product_title','$product_category','$available_quantity','$product_description','$product_price')";
 
 if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
     // Allow certain file formats
