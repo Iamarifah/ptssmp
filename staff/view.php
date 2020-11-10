@@ -218,9 +218,11 @@ $name = $row->name;
 
                     <div class="product-list">
                         <div class="row">
-                            <?php
 
-                            $sql = "SELECT * FROM product_image";
+                            <?php
+                            $sql = "SELECT * FROM product_image
+                                    WHERE seller_table = 'staff'
+                                    AND seller_id = $id";
                             $result = $conn->query($sql);
                             while ($row = $result->fetch_object()) {
 
@@ -230,13 +232,12 @@ $name = $row->name;
                                 $available_quantity = $row->available_quantity;
                                 $product_description = $row->product_description;
                                 $product_price = $row->product_price;
-
                             ?>
 
                                 <div class="product-detail">
                                     <div class="product-item">
                                         <div class="pi-pic">
-                                            <a href="./product-detail.php"><img src="img/products/<?php echo $product_name; ?>.jpg" alt="" onclick="myfunction()" style="cursor:pointer;" height="300" width="300"></a>
+                                            <a href="./product-detail.php?product_id=<?php echo $row->product_id; ?>"><img src="img/products/<?php echo $product_name; ?>.jpg" alt="" onclick="myfunction()" style="cursor:pointer;" height="300" width="300"></a>
 
                                             <div class="icon">
                                                 <i class="icon_heart_alt"></i>

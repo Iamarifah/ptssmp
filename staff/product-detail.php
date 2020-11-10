@@ -422,8 +422,8 @@ $name = $row->name;
         <div class="container-fliud">
 
             <?php
-
-            $sql = "SELECT * FROM product_image";
+            $product_id = $_GET['product_id'];
+            $sql = "SELECT * FROM product_image WHERE product_id = $product_id";
             $result = $conn->query($sql);
             while ($row = $result->fetch_object()) {
 
@@ -468,7 +468,7 @@ $name = $row->name;
 
 
                             <div class="action">
-                                <a href="#"><button class="comment btn btn-default" onclick="openForm()" aria-hidden="true" type="button"><span class="fa fa-comment"></span></button></a>
+                                <a href="chat.php?product_id=<?php echo $row->product_id; ?>"><button class="comment btn btn-default" onclick="//openForm()" aria-hidden="true" type="button"><span class="fa fa-comment"></span></button></a>
                                 <div class="chat-popup" id="myForm">
                                     <button type="btn btn-close pull-right" class="close" aria-label="Close" onclick="closeForm()"><span aria-hidden="true">&times;</span></button>
                                     <form action="#" class="form-container">

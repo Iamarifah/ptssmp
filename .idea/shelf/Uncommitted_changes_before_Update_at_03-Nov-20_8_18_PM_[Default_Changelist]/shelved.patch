@@ -1,0 +1,579 @@
+Index: staff/view.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\nrequire \"../database.php\";\r\n\r\n$id = $_SESSION['id'];\r\n$sql = \"SELECT * FROM staff WHERE id = $id\";\r\n$row = $conn->query($sql)->fetch_object();\r\n$name = $row->name;\r\n?>\r\n\r\n<!DOCTYPE html>\r\n<html lang=\"zxx\">\r\n\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"description\" content=\"PTSS MarketPlace\">\r\n    <meta name=\"keywords\" content=\"Fashi, unica, creative, html\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\r\n    <title>PTSS MarketPlace</title>\r\n\r\n    <!-- Google Font -->\r\n    <link href=\"https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap\" rel=\"stylesheet\">\r\n\r\n    <!-- Css Styles -->\r\n    <link rel=\"stylesheet\" href=\"css/bootstrap.min.css\" type=\"text/css\">\r\n    <link rel=\"stylesheet\" href=\"css/font-awesome.min.css\" type=\"text/css\">\r\n    <link rel=\"stylesheet\" href=\"css/themify-icons.css\" type=\"text/css\">\r\n    <link rel=\"stylesheet\" href=\"css/elegant-icons.css\" type=\"text/css\">\r\n    <link rel=\"stylesheet\" href=\"css/owl.carousel.min.css\" type=\"text/css\">\r\n    <link rel=\"stylesheet\" href=\"css/nice-select.css\" type=\"text/css\">\r\n    <link rel=\"stylesheet\" href=\"css/jquery-ui.min.css\" type=\"text/css\">\r\n    <link rel=\"stylesheet\" href=\"css/slicknav.min.css\" type=\"text/css\">\r\n    <link rel=\"stylesheet\" href=\"css/style.css\" type=\"text/css\">\r\n</head>\r\n\r\n<body>\r\n    <!-- Page Preloder -->\r\n    <div id=\"preloder\">\r\n        <div class=\"loader\"></div>\r\n    </div>\r\n\r\n    <!-- Header Section Begin -->\r\n    <header class=\"header-section\">\r\n        <div class=\"header-top\">\r\n            <div class=\"container\">\r\n                <div class=\"ht-left\">\r\n                    <div class=\"mail-service\">\r\n                        <i class=\" fa fa-envelope\"></i>\r\n                        @gmail.com\r\n                    </div>\r\n                </div>\r\n                <div class=\"ht-right\">\r\n                    <li><a href=\"#\" class=\"login-panel\"><i class=\"fa fa-user\"></i><?php echo $name; ?>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"container\">\r\n            <div class=\"inner-header\">\r\n                <div class=\"row\">\r\n                    <div class=\"col-lg-2 col-md-2\">\r\n                        <div class=\"logo\">\r\n                            <a href=\"./index.html\">\r\n                                <img src=\"img/ptss.png\" alt=\"\">\r\n                            </a>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"col-lg-7 col-md-7\">\r\n                        <div class=\"advanced-search\">\r\n\r\n                            <form action=\"#\" class=\"input-group\">\r\n                                <input type=\"text\" placeholder=\"What do you need?\">\r\n                                <button type=\"button\"><i class=\"ti-search\"></i></button>\r\n                            </form>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"col-lg-3 text-right col-md-3\">\r\n                        <ul class=\"nav-right\">\r\n                            <li class=\"heart-icon\">\r\n                                <a href=\"#\">\r\n                                    <i class=\"icon_heart_alt\"></i>\r\n                                </a>\r\n                            </li>\r\n                            <li class=\"cart-price\"></li>\r\n                        </ul>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"nav-item\">\r\n            <div class=\"container\">\r\n\r\n                <nav class=\"nav-menu mobile-menu\">\r\n                    <ul>\r\n                        <li><a href=\"./index.php\">Home</a>\r\n                            <ul class=\"dropdown\">\r\n                                <li><a href=\"./viewprofile.php\">View Profile</a></li>\r\n                                <li><a href=\"./updateprofile.php\">Update profile</a></li>\r\n                                <li><a href=\"./changepassword.php\">Change Password</a></li>\r\n                                <li><a href=\"./logout.php\">Logout</a></li>\r\n\r\n                            </ul>\r\n                        </li>\r\n                        <li><a href=\"./shop.php\">Shop</a>\r\n                            <ul class=\"dropdown\">\r\n                                <li><a href=\"./clothings.php\">Clothings</a></li>\r\n                                <li><a href=\"./food.php\">Foods & Beverages</a></li>\r\n                                <li><a href=\"./shoes.php\">Accessories/Shoes</a></li>\r\n                                <li><a href=\"./gadget.php\">Mobile & Gadgets</a></li>\r\n                                <li><a href=\"./beauty.php\">Health & Beauty</a></li>\r\n                                <li><a href=\"./computer.php\">Computer & Accessories</a></li>\r\n                                <li><a href=\"./sports.php\">Sports & Outdoor</a></li>\r\n                                <li><a href=\"#\">Others</a></li>\r\n                            </ul>\r\n                        </li>\r\n\r\n                        <li><a href=\"#\">Sell</a>\r\n                            <ul class=\"dropdown\">\r\n                                <li><a href=\"./add.php\">Add product</a></li>\r\n                                <li><a href=\"#\">View product</a></li>\r\n                                <li><a href=\"#\">Update product</a></li>\r\n\r\n                            </ul>\r\n                        </li>\r\n                        <li><a href=\"#\">Inbox</a>\r\n                            <ul class=\"dropdown\">\r\n\r\n                                <li><a href=\"\"></a></li>\r\n                                <li><a href=\"\"></a></li>\r\n\r\n                            </ul>\r\n                        </li>\r\n                        <li><a href=\"#\">Rate</a>\r\n                            <ul class=\"dropdown\">\r\n                                <li><a href=\"#\">View Rating</a></li>\r\n                                <li><a href=\"#\">Receive Rating</a></li>\r\n\r\n                            </ul>\r\n                        </li>\r\n                    </ul>\r\n                </nav>\r\n                <div id=\"mobile-menu-wrap\"></div>\r\n            </div>\r\n        </div>\r\n    </header>\r\n    <!-- Header End -->\r\n\r\n    <!-- Breadcrumb Section Begin -->\r\n    <div class=\"breacrumb-section\">\r\n        <div class=\"container\">\r\n            <div class=\"row\">\r\n                <div class=\"col-lg-12\">\r\n                    <div class=\"breadcrumb-text\">\r\n                        <a href=\"#\"><i class=\"fa fa-home\"></i> Home</a>\r\n                        <span>View Product</span>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <!-- Breadcrumb Section Begin -->\r\n\r\n    <!-- Product Shop Section Begin -->\r\n    <section class=\"product-shop spad\">\r\n        <div class=\"container\">\r\n            <div class=\"row\">\r\n                <div class=\"col-lg-3 col-md-6 col-sm-8 order-2 order-lg-1 produts-sidebar-filter\">\r\n                    <div class=\"filter-widget\">\r\n                        <h4 class=\"fw-title\">Categories</h4>\r\n                        <ul class=\"filter-catagories\">\r\n                            <li><a href=\"./clothings.php\">Clothings</a></li>\r\n                            <li><a href=\"./food.php\">Foods & Beverages</a></li>\r\n                            <li><a href=\"./shoes.php\">Accessories/Shoes</a></li>\r\n                            <li><a href=\"./gadget.php\">Mobile & Gadgets</a></li>\r\n                            <li><a href=\"./beauty.php\">Health & Beauty</a></li>\r\n                            <li><a href=\"./computer.php\">Computer & Accessories</a></li>\r\n                            <li><a href=\"./sports.php\">Sports & Outdoor</a></li>\r\n                            <li><a href=\"#\">Others</a></li>\r\n                        </ul>\r\n                    </div>\r\n\r\n\r\n                    <div class=\"filter-widget\">\r\n                        <h4 class=\"fw-title\">Size</h4>\r\n                        <div class=\"fw-size-choose\">\r\n                            <div class=\"sc-item\">\r\n                                <input type=\"radio\" id=\"s-size\">\r\n                                <label for=\"s-size\">s</label>\r\n                            </div>\r\n                            <div class=\"sc-item\">\r\n                                <input type=\"radio\" id=\"m-size\">\r\n                                <label for=\"m-size\">m</label>\r\n                            </div>\r\n                            <div class=\"sc-item\">\r\n                                <input type=\"radio\" id=\"l-size\">\r\n                                <label for=\"l-size\">l</label>\r\n                            </div>\r\n                            <div class=\"sc-item\">\r\n                                <input type=\"radio\" id=\"xs-size\">\r\n                                <label for=\"xs-size\">xs</label>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"col-lg-9 order-3 order-lg-2\">\r\n                    <div class=\"product-show-option\">\r\n                        <div class=\"row\">\r\n                            <div class=\"col-lg-7 col-md-7\">\r\n                                <div class=\"select-option\">\r\n                                    <select class=\"sorting\">\r\n                                        <option value=\"\">Default Sorting</option>\r\n                                    </select>\r\n                                    <select class=\"p-show\">\r\n                                        <option value=\"\">Show:</option>\r\n                                    </select>\r\n                                </div>\r\n                            </div>\r\n\r\n                        </div>\r\n                    </div>\r\n\r\n                    <div class=\"product-list\">\r\n                        <?php\r\n\r\n                        $sql = \"SELECT * FROM product_image\";\r\n                        $result = $conn->query($sql);\r\n                        while ($row = $result->fetch_object()) {\r\n\r\n                            $product_name = $row->product_name;\r\n                            $product_category = $row->product_category;\r\n                            $available_quantity = $row->available_quantity;\r\n                            $product_description = $row->product_description;\r\n                            $product_price = $row->product_price;\r\n\r\n                        ?>\r\n\r\n                            <div class=\"row\">\r\n                                <div class=\"product-detail\">\r\n                                    <div class=\"product-item\">\r\n                                        <div class=\"pi-pic\">\r\n                                            <img src=\"img/products/<?php echo $product_name; ?>.jpg\" alt=\"\" height=\"300\" width=\"300\">\r\n\r\n                                            <div class=\"icon\">\r\n                                                <i class=\"icon_heart_alt\"></i>\r\n                                            </div>\r\n                                            <ul>\r\n                                                <li class=\"w-icon active\"><a href=\"#\"><i class=\"icon_bag_alt\"></i></a></li>\r\n                                                <li class=\"quick-view\"><a href=\"#\">+ Quick View</a></li>\r\n                                                <li class=\"w-icon\"><a href=\"#\"><i class=\"fa fa-random\"></i></a></li>\r\n\r\n                                            </ul>\r\n                                        </div>\r\n\r\n                                        <div class=\"pi-text\">\r\n                                            <div class=\"catagory-name\"><?php echo $product_category; ?></div>\r\n\r\n                                            <a href=\"#\">\r\n                                                <h5></h5>\r\n                                                <p><small><?php echo $product_description; ?></small></p>\r\n                                            </a>\r\n                                            <div class=\"product_price\">RM <?php echo $product_price; ?>\r\n\r\n                                                <span></span>\r\n                                            </div>\r\n\r\n                                            <div class=\"available_quantity\">\r\n                                                <small>Available : <?php echo $available_quantity; ?></small>\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                </div>\r\n                                <br>\r\n                            <?php\r\n                        }\r\n                            ?>\r\n                            </div>\r\n                    </div>\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n\r\n    </section>\r\n    <!-- Product Shop Section End -->\r\n\r\n    <!-- Footer Section Begin -->\r\n    <footer class=\"footer-section\">\r\n        <div class=\"container\">\r\n            <div class=\"row\">\r\n                <div class=\"col-lg-3\">\r\n                    <div class=\"footer-left\">\r\n                        <div class=\"footer-logo\">\r\n                            <a href=\"#\"><img src=\"img/footer-ptss1.png\" alt=\"\"></a>\r\n                        </div>\r\n                        <ul>\r\n\r\n                            <li>Email: @gmail.com</li>\r\n                        </ul>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"copyright-reserved\">\r\n            <div class=\"container\">\r\n                <div class=\"row\">\r\n                    <div class=\"col-lg-12\">\r\n                        <div class=\"copyright-text\">\r\n                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->\r\n                            Copyright &copy;<script>\r\n                                document.write(new Date().getFullYear());\r\n                            </script> All rights reserved | This template is made with <i class=\"fa fa-heart-o\" aria-hidden=\"true\"></i> by <a href=\"https://colorlib.com\" target=\"_blank\">Colorlib</a>\r\n                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </footer>\r\n    <!-- Footer Section End -->\r\n\r\n    <!-- Js Plugins -->\r\n    <script src=\"js/jquery-3.3.1.min.js\"></script>\r\n    <script src=\"js/bootstrap.min.js\"></script>\r\n    <script src=\"js/jquery-ui.min.js\"></script>\r\n    <script src=\"js/jquery.countdown.min.js\"></script>\r\n    <script src=\"js/jquery.nice-select.min.js\"></script>\r\n    <script src=\"js/jquery.zoom.min.js\"></script>\r\n    <script src=\"js/jquery.dd.min.js\"></script>\r\n    <script src=\"js/jquery.slicknav.js\"></script>\r\n    <script src=\"js/owl.carousel.min.js\"></script>\r\n    <script src=\"js/main.js\"></script>\r\n</body>\r\n\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- staff/view.php	(revision 1398542659a3aff02618cd7263f912c3d7464bef)
++++ staff/view.php	(date 1603287811521)
+@@ -34,300 +34,304 @@
+ </head>
+ 
+ <body>
+-    <!-- Page Preloder -->
+-    <div id="preloder">
+-        <div class="loader"></div>
+-    </div>
++<!-- Page Preloder -->
++<div id="preloder">
++    <div class="loader"></div>
++</div>
+ 
+-    <!-- Header Section Begin -->
+-    <header class="header-section">
+-        <div class="header-top">
+-            <div class="container">
+-                <div class="ht-left">
+-                    <div class="mail-service">
+-                        <i class=" fa fa-envelope"></i>
+-                        @gmail.com
+-                    </div>
+-                </div>
+-                <div class="ht-right">
+-                    <li><a href="#" class="login-panel"><i class="fa fa-user"></i><?php echo $name; ?>
+-                </div>
+-            </div>
+-        </div>
+-        <div class="container">
+-            <div class="inner-header">
+-                <div class="row">
+-                    <div class="col-lg-2 col-md-2">
+-                        <div class="logo">
+-                            <a href="./index.html">
+-                                <img src="img/ptss.png" alt="">
+-                            </a>
+-                        </div>
+-                    </div>
+-                    <div class="col-lg-7 col-md-7">
+-                        <div class="advanced-search">
++<!-- Header Section Begin -->
++<header class="header-section">
++    <div class="header-top">
++        <div class="container">
++            <div class="ht-left">
++                <div class="mail-service">
++                    <i class=" fa fa-envelope"></i>
++                    @gmail.com
++                </div>
++            </div>
++            <div class="ht-right">
++                <li><a href="#" class="login-panel"><i class="fa fa-user"></i><?php echo $name; ?>
++            </div>
++        </div>
++    </div>
++    <div class="container">
++        <div class="inner-header">
++            <div class="row">
++                <div class="col-lg-2 col-md-2">
++                    <div class="logo">
++                        <a href="./index.html">
++                            <img src="img/ptss.png" alt="">
++                        </a>
++                    </div>
++                </div>
++                <div class="col-lg-7 col-md-7">
++                    <div class="advanced-search">
+ 
+-                            <form action="#" class="input-group">
+-                                <input type="text" placeholder="What do you need?">
+-                                <button type="button"><i class="ti-search"></i></button>
+-                            </form>
+-                        </div>
+-                    </div>
+-                    <div class="col-lg-3 text-right col-md-3">
+-                        <ul class="nav-right">
+-                            <li class="heart-icon">
+-                                <a href="#">
+-                                    <i class="icon_heart_alt"></i>
+-                                </a>
+-                            </li>
+-                            <li class="cart-price"></li>
+-                        </ul>
+-                    </div>
+-                </div>
+-            </div>
+-        </div>
+-        <div class="nav-item">
+-            <div class="container">
++                        <form action="#" class="input-group">
++                            <input type="text" placeholder="What do you need?">
++                            <button type="button"><i class="ti-search"></i></button>
++                        </form>
++                    </div>
++                </div>
++                <div class="col-lg-3 text-right col-md-3">
++                    <ul class="nav-right">
++                        <li class="heart-icon">
++                            <a href="#">
++                                <i class="icon_heart_alt"></i>
++                            </a>
++                        </li>
++                        <li class="cart-price"></li>
++                    </ul>
++                </div>
++            </div>
++        </div>
++    </div>
++    <div class="nav-item">
++        <div class="container">
+ 
+-                <nav class="nav-menu mobile-menu">
+-                    <ul>
+-                        <li><a href="./index.php">Home</a>
+-                            <ul class="dropdown">
+-                                <li><a href="./viewprofile.php">View Profile</a></li>
+-                                <li><a href="./updateprofile.php">Update profile</a></li>
+-                                <li><a href="./changepassword.php">Change Password</a></li>
+-                                <li><a href="./logout.php">Logout</a></li>
++            <nav class="nav-menu mobile-menu">
++                <ul>
++                    <li><a href="./index.php">Home</a>
++                        <ul class="dropdown">
++                            <li><a href="./viewprofile.php">View Profile</a></li>
++                            <li><a href="./updateprofile.php">Update profile</a></li>
++                            <li><a href="./changepassword.php">Change Password</a></li>
++                            <li><a href="./logout.php">Logout</a></li>
+ 
+-                            </ul>
+-                        </li>
+-                        <li><a href="./shop.php">Shop</a>
+-                            <ul class="dropdown">
+-                                <li><a href="./clothings.php">Clothings</a></li>
+-                                <li><a href="./food.php">Foods & Beverages</a></li>
+-                                <li><a href="./shoes.php">Accessories/Shoes</a></li>
+-                                <li><a href="./gadget.php">Mobile & Gadgets</a></li>
+-                                <li><a href="./beauty.php">Health & Beauty</a></li>
+-                                <li><a href="./computer.php">Computer & Accessories</a></li>
+-                                <li><a href="./sports.php">Sports & Outdoor</a></li>
+-                                <li><a href="#">Others</a></li>
+-                            </ul>
+-                        </li>
++                        </ul>
++                    </li>
++                    <li><a href="./shop.php">Shop</a>
++                        <ul class="dropdown">
++                            <li><a href="./clothings.php">Clothings</a></li>
++                            <li><a href="./food.php">Foods & Beverages</a></li>
++                            <li><a href="./shoes.php">Accessories/Shoes</a></li>
++                            <li><a href="./gadget.php">Mobile & Gadgets</a></li>
++                            <li><a href="./beauty.php">Health & Beauty</a></li>
++                            <li><a href="./computer.php">Computer & Accessories</a></li>
++                            <li><a href="./sports.php">Sports & Outdoor</a></li>
++                            <li><a href="#">Others</a></li>
++                        </ul>
++                    </li>
+ 
+-                        <li><a href="#">Sell</a>
+-                            <ul class="dropdown">
+-                                <li><a href="./add.php">Add product</a></li>
+-                                <li><a href="#">View product</a></li>
+-                                <li><a href="#">Update product</a></li>
++                    <li><a href="#">Sell</a>
++                        <ul class="dropdown">
++                            <li><a href="./add.php">Add product</a></li>
++                            <li><a href="#">View product</a></li>
++                            <li><a href="#">Update product</a></li>
+ 
+-                            </ul>
+-                        </li>
+-                        <li><a href="#">Inbox</a>
+-                            <ul class="dropdown">
++                        </ul>
++                    </li>
++                    <li><a href="#">Inbox</a>
++                        <ul class="dropdown">
+ 
+-                                <li><a href=""></a></li>
+-                                <li><a href=""></a></li>
++                            <li><a href=""></a></li>
++                            <li><a href=""></a></li>
+ 
+-                            </ul>
+-                        </li>
+-                        <li><a href="#">Rate</a>
+-                            <ul class="dropdown">
+-                                <li><a href="#">View Rating</a></li>
+-                                <li><a href="#">Receive Rating</a></li>
++                        </ul>
++                    </li>
++                    <li><a href="#">Rate</a>
++                        <ul class="dropdown">
++                            <li><a href="#">View Rating</a></li>
++                            <li><a href="#">Receive Rating</a></li>
+ 
+-                            </ul>
+-                        </li>
+-                    </ul>
+-                </nav>
+-                <div id="mobile-menu-wrap"></div>
+-            </div>
+-        </div>
+-    </header>
+-    <!-- Header End -->
++                        </ul>
++                    </li>
++                </ul>
++            </nav>
++            <div id="mobile-menu-wrap"></div>
++        </div>
++    </div>
++</header>
++<!-- Header End -->
+ 
+-    <!-- Breadcrumb Section Begin -->
+-    <div class="breacrumb-section">
+-        <div class="container">
+-            <div class="row">
+-                <div class="col-lg-12">
+-                    <div class="breadcrumb-text">
+-                        <a href="#"><i class="fa fa-home"></i> Home</a>
+-                        <span>View Product</span>
+-                    </div>
+-                </div>
+-            </div>
+-        </div>
+-    </div>
+-    <!-- Breadcrumb Section Begin -->
++<!-- Breadcrumb Section Begin -->
++<div class="breacrumb-section">
++    <div class="container">
++        <div class="row">
++            <div class="col-lg-12">
++                <div class="breadcrumb-text">
++                    <a href="#"><i class="fa fa-home"></i> Home</a>
++                    <span>View Product</span>
++                </div>
++            </div>
++        </div>
++    </div>
++</div>
++<!-- Breadcrumb Section Begin -->
+ 
+-    <!-- Product Shop Section Begin -->
+-    <section class="product-shop spad">
+-        <div class="container">
+-            <div class="row">
+-                <div class="col-lg-3 col-md-6 col-sm-8 order-2 order-lg-1 produts-sidebar-filter">
+-                    <div class="filter-widget">
+-                        <h4 class="fw-title">Categories</h4>
+-                        <ul class="filter-catagories">
+-                            <li><a href="./clothings.php">Clothings</a></li>
+-                            <li><a href="./food.php">Foods & Beverages</a></li>
+-                            <li><a href="./shoes.php">Accessories/Shoes</a></li>
+-                            <li><a href="./gadget.php">Mobile & Gadgets</a></li>
+-                            <li><a href="./beauty.php">Health & Beauty</a></li>
+-                            <li><a href="./computer.php">Computer & Accessories</a></li>
+-                            <li><a href="./sports.php">Sports & Outdoor</a></li>
+-                            <li><a href="#">Others</a></li>
+-                        </ul>
+-                    </div>
++<!-- Product Shop Section Begin -->
++<section class="product-shop spad">
++    <div class="container">
++        <div class="row">
++            <div class="col-lg-3 col-md-6 col-sm-8 order-2 order-lg-1 produts-sidebar-filter">
++                <div class="filter-widget">
++                    <h4 class="fw-title">Categories</h4>
++                    <ul class="filter-catagories">
++                        <li><a href="./clothings.php">Clothings</a></li>
++                        <li><a href="./food.php">Foods & Beverages</a></li>
++                        <li><a href="./shoes.php">Accessories/Shoes</a></li>
++                        <li><a href="./gadget.php">Mobile & Gadgets</a></li>
++                        <li><a href="./beauty.php">Health & Beauty</a></li>
++                        <li><a href="./computer.php">Computer & Accessories</a></li>
++                        <li><a href="./sports.php">Sports & Outdoor</a></li>
++                        <li><a href="#">Others</a></li>
++                    </ul>
++                </div>
+ 
+ 
+-                    <div class="filter-widget">
+-                        <h4 class="fw-title">Size</h4>
+-                        <div class="fw-size-choose">
+-                            <div class="sc-item">
+-                                <input type="radio" id="s-size">
+-                                <label for="s-size">s</label>
+-                            </div>
+-                            <div class="sc-item">
+-                                <input type="radio" id="m-size">
+-                                <label for="m-size">m</label>
+-                            </div>
+-                            <div class="sc-item">
+-                                <input type="radio" id="l-size">
+-                                <label for="l-size">l</label>
+-                            </div>
+-                            <div class="sc-item">
+-                                <input type="radio" id="xs-size">
+-                                <label for="xs-size">xs</label>
+-                            </div>
+-                        </div>
+-                    </div>
+-                </div>
+-                <div class="col-lg-9 order-3 order-lg-2">
+-                    <div class="product-show-option">
+-                        <div class="row">
+-                            <div class="col-lg-7 col-md-7">
+-                                <div class="select-option">
+-                                    <select class="sorting">
+-                                        <option value="">Default Sorting</option>
+-                                    </select>
+-                                    <select class="p-show">
+-                                        <option value="">Show:</option>
+-                                    </select>
+-                                </div>
+-                            </div>
++                <div class="filter-widget">
++                    <h4 class="fw-title">Size</h4>
++                    <div class="fw-size-choose">
++                        <div class="sc-item">
++                            <input type="radio" id="s-size">
++                            <label for="s-size">s</label>
++                        </div>
++                        <div class="sc-item">
++                            <input type="radio" id="m-size">
++                            <label for="m-size">m</label>
++                        </div>
++                        <div class="sc-item">
++                            <input type="radio" id="l-size">
++                            <label for="l-size">l</label>
++                        </div>
++                        <div class="sc-item">
++                            <input type="radio" id="xs-size">
++                            <label for="xs-size">xs</label>
++                        </div>
++                    </div>
++                </div>
++            </div>
++            <div class="col-lg-9 order-3 order-lg-2">
++                <div class="product-show-option">
++                    <div class="row">
++                        <div class="col-lg-7 col-md-7">
++                            <div class="select-option">
++                                <select class="sorting">
++                                    <option value="">Default Sorting</option>
++                                </select>
++                                <select class="p-show">
++                                    <option value="">Show:</option>
++                                </select>
++                            </div>
++                        </div>
+ 
+-                        </div>
+-                    </div>
++                    </div>
++                </div>
+ 
+-                    <div class="product-list">
+-                        <?php
++                <div class="product-list">
++                    <div class="row">
++                    <?php
+ 
+-                        $sql = "SELECT * FROM product_image";
+-                        $result = $conn->query($sql);
+-                        while ($row = $result->fetch_object()) {
++                    $sql = "SELECT * FROM product_image";
++                    $result = $conn->query($sql);
++                    while ($row = $result->fetch_object()) {
+ 
+-                            $product_name = $row->product_name;
+-                            $product_category = $row->product_category;
+-                            $available_quantity = $row->available_quantity;
+-                            $product_description = $row->product_description;
+-                            $product_price = $row->product_price;
++                    $product_name = $row->product_name;
++                    $product_category = $row->product_category;
++                    $available_quantity = $row->available_quantity;
++                    $product_description = $row->product_description;
++                    $product_price = $row->product_price;
+ 
+-                        ?>
++                    ?>
+ 
+-                            <div class="row">
+-                                <div class="product-detail">
+-                                    <div class="product-item">
+-                                        <div class="pi-pic">
+-                                            <img src="img/products/<?php echo $product_name; ?>.jpg" alt="" height="300" width="300">
++                        <div class="product-detail">
++                            <div class="product-item">
++                                <div class="pi-pic">
++                                    <img src="img/products/<?php echo $product_name; ?>.jpg" alt="" height="300"
++                                         width="300">
+ 
+-                                            <div class="icon">
+-                                                <i class="icon_heart_alt"></i>
+-                                            </div>
+-                                            <ul>
+-                                                <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
+-                                                <li class="quick-view"><a href="#">+ Quick View</a></li>
+-                                                <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
++                                    <div class="icon">
++                                        <i class="icon_heart_alt"></i>
++                                    </div>
++                                    <ul>
++                                        <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
++                                        <li class="quick-view"><a href="#">+ Quick View</a></li>
++                                        <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
+ 
+-                                            </ul>
+-                                        </div>
++                                    </ul>
++                                </div>
+ 
+-                                        <div class="pi-text">
+-                                            <div class="catagory-name"><?php echo $product_category; ?></div>
++                                <div class="pi-text">
++                                    <div class="catagory-name"><?php echo $product_category; ?></div>
+ 
+-                                            <a href="#">
+-                                                <h5></h5>
+-                                                <p><small><?php echo $product_description; ?></small></p>
+-                                            </a>
+-                                            <div class="product_price">RM <?php echo $product_price; ?>
++                                    <a href="#">
++                                        <h5></h5>
++                                        <p><small><?php echo $product_description; ?></small></p>
++                                    </a>
++                                    <div class="product_price">RM <?php echo $product_price; ?>
+ 
+-                                                <span></span>
+-                                            </div>
++                                        <span></span>
++                                    </div>
+ 
+-                                            <div class="available_quantity">
+-                                                <small>Available : <?php echo $available_quantity; ?></small>
+-                                            </div>
+-                                        </div>
+-                                    </div>
+-                                </div>
+-                                <br>
+-                            <?php
++                                    <div class="available_quantity">
++                                        <small>Available : <?php echo $available_quantity; ?></small>
++                                    </div>
++                                </div>
++                            </div>
++                        </div>
++                        <br>
++                        <?php
+                         }
+-                            ?>
+-                            </div>
+-                    </div>
++                        ?>
++                    </div>
++                </div>
+ 
+-                </div>
+-            </div>
+-        </div>
++            </div>
++        </div>
++    </div>
+ 
+-    </section>
+-    <!-- Product Shop Section End -->
++</section>
++<!-- Product Shop Section End -->
+ 
+-    <!-- Footer Section Begin -->
+-    <footer class="footer-section">
+-        <div class="container">
+-            <div class="row">
+-                <div class="col-lg-3">
+-                    <div class="footer-left">
+-                        <div class="footer-logo">
+-                            <a href="#"><img src="img/footer-ptss1.png" alt=""></a>
+-                        </div>
+-                        <ul>
++<!-- Footer Section Begin -->
++<footer class="footer-section">
++    <div class="container">
++        <div class="row">
++            <div class="col-lg-3">
++                <div class="footer-left">
++                    <div class="footer-logo">
++                        <a href="#"><img src="img/footer-ptss1.png" alt=""></a>
++                    </div>
++                    <ul>
+ 
+-                            <li>Email: @gmail.com</li>
+-                        </ul>
+-                    </div>
+-                </div>
+-            </div>
+-        </div>
+-        <div class="copyright-reserved">
+-            <div class="container">
+-                <div class="row">
+-                    <div class="col-lg-12">
+-                        <div class="copyright-text">
+-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+-                            Copyright &copy;<script>
+-                                document.write(new Date().getFullYear());
+-                            </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+-                        </div>
+-                    </div>
+-                </div>
+-            </div>
+-        </div>
+-    </footer>
+-    <!-- Footer Section End -->
++                        <li>Email: @gmail.com</li>
++                    </ul>
++                </div>
++            </div>
++        </div>
++    </div>
++    <div class="copyright-reserved">
++        <div class="container">
++            <div class="row">
++                <div class="col-lg-12">
++                    <div class="copyright-text">
++                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
++                        Copyright &copy;<script>
++                            document.write(new Date().getFullYear());
++                        </script>
++                        All rights reserved | This template is made with <i class="fa fa-heart-o"
++                                                                            aria-hidden="true"></i> by <a
++                                href="https://colorlib.com" target="_blank">Colorlib</a>
++                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
++                    </div>
++                </div>
++            </div>
++        </div>
++    </div>
++</footer>
++<!-- Footer Section End -->
+ 
+-    <!-- Js Plugins -->
+-    <script src="js/jquery-3.3.1.min.js"></script>
+-    <script src="js/bootstrap.min.js"></script>
+-    <script src="js/jquery-ui.min.js"></script>
+-    <script src="js/jquery.countdown.min.js"></script>
+-    <script src="js/jquery.nice-select.min.js"></script>
+-    <script src="js/jquery.zoom.min.js"></script>
+-    <script src="js/jquery.dd.min.js"></script>
+-    <script src="js/jquery.slicknav.js"></script>
+-    <script src="js/owl.carousel.min.js"></script>
+-    <script src="js/main.js"></script>
++<!-- Js Plugins -->
++<script src="js/jquery-3.3.1.min.js"></script>
++<script src="js/bootstrap.min.js"></script>
++<script src="js/jquery-ui.min.js"></script>
++<script src="js/jquery.countdown.min.js"></script>
++<script src="js/jquery.nice-select.min.js"></script>
++<script src="js/jquery.zoom.min.js"></script>
++<script src="js/jquery.dd.min.js"></script>
++<script src="js/jquery.slicknav.js"></script>
++<script src="js/owl.carousel.min.js"></script>
++<script src="js/main.js"></script>
+ </body>
+ 
+-</html>
+\ No newline at end of file
++</html>

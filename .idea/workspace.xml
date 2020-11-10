@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1da7417e-a99e-464e-94ac-3295b336eb65" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/ptssmp.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/contoh_ptss 2020-11-07.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/readme.txt.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff/add-process.php" beforeDir="false" afterPath="$PROJECT_DIR$/staff/add-process.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff/chat.php" beforeDir="false" afterPath="$PROJECT_DIR$/staff/chat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/staff/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff/fetch_user.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff/insertchat.php" beforeDir="false" afterPath="$PROJECT_DIR$/staff/chat-save.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff/product-detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/staff/product-detail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/staff/view.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="ProjectId" id="1jBnpT5BS8vylzkiLXvK0NOqHJ5" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mariadb" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1da7417e-a99e-464e-94ac-3295b336eb65" name="Default Changelist" comment="" />
+      <created>1603286535426</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603286535426</updated>
+      <workItem from="1603286536665" duration="2499000" />
+      <workItem from="1604405403603" duration="20111000" />
+      <workItem from="1604665528199" duration="17473000" />
+      <workItem from="1604843063808" duration="7708000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603287190719">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1366.0.1366.728/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1603287190719" />
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1604405605881">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="308" y="0" key="CommitChangelistDialog2/-1366.0.1366.728/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1604405605881" />
+    <state x="129" y="55" key="MergeDialog" timestamp="1604405964534">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="129" y="55" key="MergeDialog/-1366.0.1366.728/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1604405964534" />
+    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604405618202">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1366.0.1366.728/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1604405618202" />
+    <state x="2108" y="0" width="501" height="687" maximized="true" key="dock-window-1" timestamp="1604922382112">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="2108" y="0" width="501" height="687" maximized="true" key="dock-window-1/0.0.1366.728/1366.0.1366.728/-1366.0.1366.728@0.0.1366.728" timestamp="1604922382112" />
+  </component>
+</project>

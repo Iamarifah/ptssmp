@@ -1,0 +1,103 @@
+Index: .idea/codeStyles/codeStyleConfig.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/codeStyles/codeStyleConfig.xml	(date 1604405964569)
++++ .idea/codeStyles/codeStyleConfig.xml	(date 1604405964569)
+@@ -0,0 +1,5 @@
++<component name="ProjectCodeStyleConfiguration">
++  <state>
++    <option name="PREFERRED_PROJECT_CODE_STYLE" value="Default" />
++  </state>
++</component>
+Index: .idea/dataSources.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/dataSources.xml	(date 1604405913276)
++++ .idea/dataSources.xml	(date 1604405913276)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
++    <data-source source="LOCAL" name="contoh_ptss@localhost" uuid="035241dc-826a-495a-a626-b3ad1c0939b0">
++      <driver-ref>mariadb</driver-ref>
++      <synchronize>true</synchronize>
++      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
++      <jdbc-url>jdbc:mariadb://localhost:3306/contoh_ptss</jdbc-url>
++    </data-source>
++  </component>
++</project>
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/modules.xml	(date 1604405913544)
++++ .idea/modules.xml	(date 1604405913544)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/ptssmp.iml" filepath="$PROJECT_DIR$/.idea/ptssmp.iml" />
++    </modules>
++  </component>
++</project>
+Index: .idea/ptssmp.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/ptssmp.iml	(date 1604405913409)
++++ .idea/ptssmp.iml	(date 1604405913409)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="WEB_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$" />
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+Index: database.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n$servername = \"localhost\";\r\n$username = \"root\";\r\n$password = \"\";\r\n$database = \"ptss\";\r\n\r\n// Create connection\r\n$conn = new mysqli($servername, $username, $password, $database);\r\nsession_start();
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- database.php	(revision c82be7986dd77a1f54b260fb115e4d21b5c9f2ef)
++++ database.php	(date 1604405913376)
+@@ -1,9 +1,9 @@
+ <?php
+ $servername = "localhost";
+ $username = "root";
+-$password = "";
+-$database = "ptss";
++$password = "123456";
++$database = "contoh_ptss";
+ 
+ // Create connection
+ $conn = new mysqli($servername, $username, $password, $database);
+-session_start();
+\ No newline at end of file
++session_start();
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/vcs.xml	(date 1604405913063)
++++ .idea/vcs.xml	(date 1604405913063)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+diff --git db/readme.txt.txt db/readme.txt.txt
+deleted file mode 100644
