@@ -192,7 +192,15 @@ $name = $row->name;
                     <div class="form-group text-center">
                         <img src="img/placeholder.png" onclick="triggerClick()" id="profileimage" />
                         <label for="filebutton">PROFILE</label>
-                        <input type="file" name="profile" id="profile" onchange="displayImage(this)" class="form-control" style="display: none;">
+                        <input type="file" name="profile_image" id="profile" onchange="displayImage(this)" class="form-control" style="display: none;">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">NAME</label>
+                        <input id="name" name="name" placeholder="NAME" class="form-control input-md" required="" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="department">DEPARTMENT</label>
+                        <input id="department" name="department" placeholder="DEPARTMENT" class="form-control input-md" required="" type="text">  
                     </div>
                     <div class="form-group">
                         <label for="email">EMAIL</label>

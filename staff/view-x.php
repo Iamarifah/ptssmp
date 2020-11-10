@@ -237,7 +237,11 @@ $name = $row->name;
                                 <div class="product-detail">
                                     <div class="product-item">
                                         <div class="pi-pic">
+<<<<<<< HEAD
                                             <a href="./product-detail.php?product_id=<?php echo $row->product_id; ?>"><img src="img/products/<?php echo $product_name; ?>.jpg" alt="" onclick="myfunction()" style="cursor:pointer;" height="300" width="300"></a>
+=======
+                                        <a href="./product-detail.php?product_id=<?php echo $row->product_id; ?>"><img src="img/products/<?php echo $product_name; ?>.jpg" alt="" onclick="myfunction()" style="cursor:pointer;" height="300" width="300"></a>
+>>>>>>> 530950dfae02eeb6907f232eabc8c6a71f14d53a
 
                                             <div class="icon">
                                                 <i class="icon_heart_alt"></i>
@@ -250,12 +254,12 @@ $name = $row->name;
                                         </div>
 
                                         <div class="pi-text">
-                                            <div class="product-name"><?php echo $product_title; ?></div>
+                                            <div class="product-name"><?php echo $product_title; ?></div></br>
                                             <div class="catagory-name"><?php echo $product_category; ?></div>
 
                                             <a href="#">
                                                 <h5></h5>
-                                                <p><small><?php echo $product_description; ?></small></p>
+                                                <p><?php echo $product_description; ?></p>
                                             </a>
                                             <div class="product_price">RM <?php echo $product_price; ?>
 
@@ -335,14 +339,14 @@ $name = $row->name;
     <div class="modal fade product_view" id="product_view">
         <div class="modal-dialog">
             <div class="modal-content">
-
                 <div class="modal-body">
-                    <div class="row">
+                <button type="btn btn-close pull-right" class="close" aria-label="Close" onclick="closeForm()"><span aria-hidden="true">&times;</span></button>
+                    <div class="row">                     
                         <div class="col-md-6 product_img">
-                            <img src="img/products/<?php echo $product_name; ?>.jpg" class="img-responsive">
+                        <a href="./product-detail.php?product_id=<?php echo $row->product_id; ?>"><img src="img/products/<?php echo $product_name; ?>.jpg" class="img-responsive"></a>
                         </div>
                         <div class="col-md-6 product_content">
-                            <h4><b><?php echo $product_description; ?></b></h4>
+                            <h4><b><?php echo $product_title; ?></b></h4></br>
                             <div class="rating">
                                 <div class="stars">
                                     <span class="fa fa-star checked"></span>
